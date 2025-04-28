@@ -6,6 +6,9 @@
     <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
   </head>
   <body>
-    <redoc spec-url="https://raw.githubusercontent.com/LucasEdu07/testes-doc-swagger/main/swagger.json"></redoc>
+    <div id="redoc-container"></div>
+    <script>
+      Redoc.init('https://raw.githubusercontent.com/LucasEdu07/testes-doc-swagger/main/swagger.json', {}, document.getElementById('redoc-container'));
+    </script>
   </body>
 </html>
