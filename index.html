@@ -8,19 +8,35 @@
   <style>
     body {
       margin: 0;
-      background-color: #f4f6f8;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fafafa;
     }
     header {
-      background-color: #4CAF50;
+      background-color: #24292F;
       color: white;
       padding: 20px;
       text-align: center;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
     }
     .redoc-container {
       height: calc(100vh - 80px); /* 100% da tela menos o header */
+      background-color: #fff;
+    }
+    #redoc-container {
+      height: 100%;
+    }
+    .swagger-ui .topbar {
+      display: none !important;
+    }
+    .swagger-ui .info {
+      font-size: 18px;
+    }
+    .swagger-ui .paths-wrapper {
+      background-color: #ffffff;
+      border: 1px solid #dcdcdc;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+      padding: 20px;
     }
   </style>
 </head>
@@ -41,25 +57,35 @@
     theme: {
       colors: {
         primary: {
-          main: '#4CAF50'
+          main: '#24292F', /* Cor próxima do Swagger original */
         },
         success: {
-          main: '#00C853'
+          main: '#28a745', /* Cor para sucesso */
         },
         text: {
-          primary: '#212121',
-          secondary: '#757575'
+          primary: '#333', /* Cor de texto primária */
+          secondary: '#6c757d', /* Cor de texto secundária */
         },
         background: {
-          default: '#f4f6f8'
+          default: '#f7f7f7', /* Cor de fundo mais suave */
         }
       },
       typography: {
-        fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+        fontFamily: 'Roboto, Arial, sans-serif',
         headings: {
-          fontFamily: 'Georgia, serif',
+          fontFamily: 'Roboto, Arial, sans-serif',
           fontWeight: 'bold',
+        },
+        code: {
+          fontFamily: 'monospace', /* Fonte de código */
         }
+      },
+      sidebar: {
+        backgroundColor: '#ffffff',
+        textColor: '#333',
+        hoverColor: '#f1f1f1',
+        width: '240px',
+        widthExpanded: '300px',
       }
     }
   }, document.getElementById('redoc-container'));
